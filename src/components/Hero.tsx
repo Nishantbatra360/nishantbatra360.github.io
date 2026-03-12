@@ -12,7 +12,7 @@ export const Hero = () => {
     return (
         <section id="home" className={styles.hero}>
             <div className={styles.heroContainer}>
-                <div className={styles.content}>
+                <div className={`${styles.content} ${theme === 'cyberpunk' ? styles.cyberpunkContent : ''}`}>
                     <motion.span
                         className={styles.greeting}
                         initial={{ opacity: 0, y: 20 }}
