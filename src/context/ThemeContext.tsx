@@ -16,11 +16,8 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
         if (savedTheme === 'light' || savedTheme === 'dark' || savedTheme === 'cyberpunk') {
             return savedTheme as Theme;
         }
-        // Fallback to system preference
-        if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-            return 'light';
-        }
-        return 'dark';
+        // Default to light if nothing is saved
+        return 'light';
     });
 
     useEffect(() => {
@@ -37,9 +34,9 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 
     const toggleTheme = () => {
         setTheme((prev) => {
-            if (prev === 'dark') return 'light';
-            if (prev === 'light') return 'cyberpunk';
-            return 'dark';
+            if (prev === 'light') return 'dark';
+            if (prev === 'dark') return 'cyberpunk';
+            return 'light';
         });
     };
 
