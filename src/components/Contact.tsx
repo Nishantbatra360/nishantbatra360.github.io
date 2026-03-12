@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import styles from './Contact.module.css';
 import links from '../data/links.json';
+import resumePdf from '../assets/Nishant_Batra_Resume.pdf';
 
 export const Contact = () => {
     return (
@@ -44,7 +45,7 @@ export const Contact = () => {
                     </a>
 
                     <a
-                        href={links.documents.resume}
+                        href={resumePdf}
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`${styles.socialLink} ${styles.resume}`}

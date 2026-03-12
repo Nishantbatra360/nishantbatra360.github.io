@@ -10,11 +10,13 @@ import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 import { NotFound } from './components/NotFound';
+import { BinaryBackground } from './components/BinaryBackground';
 import styles from './App.module.css';
 
 function App() {
   return (
     <HashRouter>
+      <BinaryBackground />
       <ScrollToTop />
       <Routes>
         <Route path="/" element={
