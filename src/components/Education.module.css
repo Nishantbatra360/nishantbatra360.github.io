@@ -1,0 +1,137 @@
+.section {
+    padding: clamp(3.1rem, 7vw, 4.8rem) var(--spacing-xl);
+    background: var(--bg-primary);
+    position: relative;
+}
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.title {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 800;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1.02rem;
+    font-weight: 600;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 34px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, rgba(14, 165, 233, 0.8), rgba(15, 118, 110, 0.45));
+}
+
+.card {
+    position: relative;
+    margin-bottom: var(--spacing-xl);
+    padding-bottom: var(--spacing-xl);
+}
+
+.card:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.marker {
+    position: absolute;
+    left: -39px;
+    top: 10px;
+    width: 10px;
+    height: 10px;
+    background: #22d3ee;
+    border: 2px solid var(--bg-primary);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.18);
+}
+
+.content {
+    background: var(--bg-card);
+    padding: 1.25rem 1.35rem;
+    border-radius: 1rem;
+    border: 1px solid var(--border-color);
+    transition: all var(--transition-normal);
+}
+
+.content:hover {
+    border-color: rgba(14, 165, 233, 0.4);
+    box-shadow: 0 10px 20px rgba(2, 6, 23, 0.2);
+    transform: translateX(3px);
+}
+
+.school {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-sm);
+}
+
+.degree {
+    font-size: 0.97rem;
+    color: #22d3ee;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+}
+
+.meta {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    flex-wrap: wrap;
+}
+
+.period {
+    font-weight: 600;
+}
+
+.separator {
+    color: var(--text-tertiary);
+}
+
+.location {
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+
+    .title {
+        font-size: 2.5rem;
+    }
+
+    .timeline {
+        padding-left: 30px;
+    }
+
+    .marker {
+        left: -36px;
+    }
+
+    .content {
+        padding: var(--spacing-lg);
+    }
+}

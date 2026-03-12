@@ -1,0 +1,122 @@
+:root {
+  --bg-primary: #0f172a;
+  --bg-secondary: #111c32;
+  --bg-tertiary: #1c2942;
+  --bg-card: rgba(17, 28, 50, 0.86);
+  --border-color: rgba(148, 163, 184, 0.2);
+  --bg-nav: rgba(13, 23, 42, 0.82);
+
+  --text-primary: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --text-tertiary: #94a3b8;
+
+  --gradient-primary: linear-gradient(135deg, #0f766e 0%, #1d4ed8 100%);
+  --gradient-secondary: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+  --gradient-accent: linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+  --gradient-gold: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+
+  --neon-purple: #0ea5e9;
+  --neon-blue: #0284c7;
+  --neon-pink: #14b8a6;
+  --neon-cyan: #22d3ee;
+
+  --glow-purple: 0 10px 28px rgba(15, 118, 110, 0.25);
+  --glow-blue: 0 10px 28px rgba(37, 99, 235, 0.25);
+  --glow-pink: 0 10px 28px rgba(20, 184, 166, 0.22);
+
+  --font-sans: 'Manrope', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Consolas', monospace;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.75rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4.5rem;
+  --spacing-3xl: 5.5rem;
+
+  /* Border Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 1rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 280ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 420ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Z-index */
+  --z-background: -1;
+  --z-normal: 1;
+  --z-nav: 100;
+  --z-overlay: 200;
+  --z-modal: 300;
+}
+
+[data-theme='light'] {
+  --bg-primary: #f3f7fb;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #e7eef8;
+  --bg-card: rgba(255, 255, 255, 0.94);
+  --border-color: rgba(148, 163, 184, 0.3);
+  --bg-nav: rgba(243, 247, 251, 0.85);
+
+  --text-primary: #0f172a;
+  --text-secondary: #334155;
+  --text-tertiary: #64748b;
+
+  --gradient-primary: linear-gradient(135deg, #0f766e 0%, #1d4ed8 100%);
+  --gradient-secondary: linear-gradient(135deg, #334155 0%, #64748b 100%);
+  --gradient-accent: linear-gradient(135deg, #0284c7 0%, #0d9488 100%);
+
+  --neon-purple: #0284c7;
+  --neon-blue: #1d4ed8;
+  --neon-pink: #0f766e;
+  --neon-cyan: #0e7490;
+
+  --glow-purple: 0 8px 22px rgba(2, 132, 199, 0.15);
+  --glow-blue: 0 8px 22px rgba(29, 78, 216, 0.15);
+  --glow-pink: 0 8px 22px rgba(15, 118, 110, 0.15);
+}
+
+[data-theme='cyberpunk'] {
+  --bg-primary: #050505;
+  --bg-secondary: #0a0a0c;
+  --bg-tertiary: #111116;
+  --bg-card: rgba(10, 10, 12, 0.9);
+  --border-color: rgba(244, 63, 94, 0.5); /* Pinkish border */
+  --bg-nav: rgba(5, 5, 5, 0.9);
+
+  --text-primary: #fdf2f8; /* Light pinkish white */
+  --text-secondary: #f43f5e; /* Cyberpunk pink */
+  --text-tertiary: #2dd4bf; /* Cyberpunk teal */
+
+  --gradient-primary: linear-gradient(135deg, #f43f5e 0%, #8b5cf6 100%); /* Pink to purple */
+  --gradient-secondary: linear-gradient(135deg, #d946ef 0%, #3b82f6 100%); /* Magenta to blue */
+  --gradient-accent: linear-gradient(135deg, #fde047 0%, #f97316 100%); /* Yellow to orange */
+  --gradient-gold: linear-gradient(135deg, #a855f7 0%, #f43f5e 100%);
+
+  --neon-purple: #c026d3;
+  --neon-blue: #3b82f6;
+  --neon-pink: #f43f5e;
+  --neon-cyan: #22d3ee;
+
+  --glow-purple: 0 10px 28px rgba(192, 38, 211, 0.5);
+  --glow-blue: 0 10px 28px rgba(59, 130, 246, 0.5);
+  --glow-pink: 0 10px 28px rgba(244, 63, 94, 0.5);
+  --glow-text: 0 0 5px #f43f5e, 0 0 10px #f43f5e, 0 0 20px #f43f5e;
+  --glow-text-cyan: 0 0 5px #2dd4bf, 0 0 10px #2dd4bf, 0 0 20px #2dd4bf;
+
+  --font-sans: 'Share Tech Mono', 'Courier New', monospace;
+  --font-mono: 'Share Tech Mono', 'Courier New', monospace;
+
+  /* Cyberpunk Sharpened Edges */
+  --radius-sm: 0;
+  --radius-md: 2px;
+  --radius-lg: 4px;
+  --radius-xl: 6px;
+  --radius-full: 8px; /* Remove completely pill-shaped elements for a rigid tech look */
+}

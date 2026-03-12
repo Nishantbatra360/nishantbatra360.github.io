@@ -1,0 +1,140 @@
+.section {
+    padding: clamp(3.2rem, 7vw, 5rem) var(--spacing-xl);
+    background: var(--bg-primary);
+    position: relative;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2.2rem;
+}
+
+.title {
+    font-size: clamp(2rem, 4.5vw, 3rem);
+    font-weight: 800;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    max-width: 880px;
+    margin: 0 auto;
+}
+
+.capabilityGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+}
+
+.capabilityCard {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 1.2rem;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.capabilityCard:hover {
+    transform: translateY(-3px);
+    border-color: rgba(14, 165, 233, 0.4);
+    box-shadow: 0 12px 20px rgba(2, 6, 23, 0.2);
+}
+
+.capabilityCard h3 {
+    margin-bottom: 0.55rem;
+    font-size: 1.08rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.capabilityCard p {
+    color: var(--text-secondary);
+    font-size: 0.92rem;
+}
+
+.flowBoard {
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.08), rgba(16, 185, 129, 0.08));
+    border: 1px solid rgba(125, 140, 180, 0.3);
+    border-radius: 1rem;
+    padding: 1.2rem;
+    margin-bottom: var(--spacing-xl);
+}
+
+.flowBoard h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--text-primary);
+}
+
+.flowTrack {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.flowNode {
+    position: relative;
+    text-align: center;
+    padding: 0.72rem 0.55rem;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    background: rgba(15, 23, 42, 0.55);
+    color: var(--text-primary);
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.flowNode::after {
+    content: '>';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #22d3ee;
+    font-weight: 900;
+}
+
+.flowNode:last-child::after {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .flowTrack {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .flowNode:nth-child(3)::after {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: var(--spacing-2xl) var(--spacing-md);
+    }
+
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .flowTrack {
+        grid-template-columns: 1fr;
+    }
+
+    .flowNode::after {
+        content: 'v';
+        right: 50%;
+        top: auto;
+        bottom: -18px;
+        transform: translateX(50%);
+    }
+}
