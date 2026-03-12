@@ -54,6 +54,12 @@
     -webkit-text-fill-color: transparent;
 }
 
+.rightSection {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
 .links {
     display: flex;
     gap: clamp(0.75rem, 1.4vw, 1.45rem);

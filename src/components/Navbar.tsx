@@ -18,7 +18,8 @@ export const Navbar = () => {
             <div className={styles.logo}>
                 Nishant<span>Batra</span>
             </div>
-            <div className={styles.links}>
+            <div className={styles.rightSection}>
+                <div className={styles.links}>
                 {navLinks.map((link) => (
                     <a
                         key={link.id}
@@ -32,6 +33,7 @@ export const Navbar = () => {
                         {link.label}
                     </a>
                 ))}
+                </div>
                 <ThemeToggle />
             </div>
         </nav>
